@@ -12,32 +12,23 @@ class EmailController extends Controller
      */
     public function index()
     {
-        //
+        return response(array('message' => 'test api'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request) {}
 
     /**
      * Display the specified resource.
      */
-    public function show(Email $email)
-    {
-        //
-    }
+    public function show(Email $email) {}
 
     /**
      * Show the form for editing the specified resource.
