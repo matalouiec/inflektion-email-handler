@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Email;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class EmailController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Response
     {
-        return response(array('message' => 'test api'));
+        return response(array('message' => 'test api'), 200);
     }
 
     /**
@@ -28,7 +29,10 @@ class EmailController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Email $email) {}
+    public function show(Email $email): Response
+    {
+        return response(array('message' => $email, 200));
+    }
 
     /**
      * Show the form for editing the specified resource.
